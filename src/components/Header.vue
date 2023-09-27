@@ -1,0 +1,189 @@
+<template>
+  <header id="home" class="header-home">
+    <h1>Développons votre<span> Projet </span>Ensemble!</h1>
+    <h2>Valentin BOURY</h2>
+    <hr />
+    <p>Développeur Back-End</p>
+    <div class="home-btns">
+      <a href="/descriptionaboutme" class="home-btn home-btn1">About Me</a>
+      <a href="/contactme" class="home-btn home-btn2">Contact Me</a>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'AppHeader',
+};
+</script>
+
+<style scoped>
+/* Styles spécifiques au composant */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+p, span, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+h1,h2 {
+    font-family: "Secular One", sans-serif;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #ffa600;
+}
+
+p {
+    font-size: calc(13px + 0.2vw)
+}
+
+.header-home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 80px;
+    background: no-repeat center / cover url(../assets/fond.jpg);
+    /* -wmso-background-attachment: fixed; */
+    background-attachment: fixed;
+    padding-left: 1rem;
+}
+
+.header-home h1 {
+    color: #f1f1f1;
+    font-size: calc(30px + 2.3vw);
+    margin-bottom: 1rem;
+}
+
+.header-home h1 span {
+    color: #ffa600;
+    font-family: 'Dancing Script', cursive;
+    font-size: calc(30px + 5.3vw);
+}
+
+.header-home h2 {
+    color: #f1f1f1;
+    margin-bottom: 1rem;
+    font-size: calc(20px + 1.3vw);
+}
+
+.header-home hr {
+    border: none;
+    width: 250px;
+    height: 2px;
+    background: #ffa600;
+    margin-bottom: 1rem;
+}
+
+.header-home p {
+    font-size: 30px;
+    margin-bottom: 1rem;
+    color: #f1f1f1;
+    font-size: calc(13px + 1.3vw);
+}
+
+.home-btns {
+    height: auto;
+    margin: 2rem 0;
+}
+
+.home-btn {
+    border: 1px solid #ffa600;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: #f1f1f1;
+}
+
+.home-btn:hover {
+    color: #f1f1f1;
+}
+
+.home-btn2 {
+    border: 1px solid #ffa600;
+    background: #ffa600;
+    box-shadow: 0 0 0 0 rgb(173,226,226,0.4);
+        transition: box-shadow 0.2s ease-in;
+    margin-right: 1rem;
+}
+
+.home-btn2:hover {
+    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+}
+
+.home-btn1 {
+    box-shadow: 0 0 0 0 rgb(173, 226, 226, 0.4);
+    transition: box-shadow 0.2s ease-in,
+    background 0.2s ease-in;
+    margin-right: 1rem;
+}
+
+.home-btn1:hover {
+    background: #ffa600;
+    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+}
+/* 
+.home-btn3 {
+    box-shadow: 0 0 0 0 rgb(173, 226, 226, 0.4);
+    transition: box-shadow 0.2s ease-in,
+    background 0.2s ease-in;
+    margin-right: 1rem;
+}
+
+.home-btn3:hover {
+    background: #ffa600;
+    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+}
+
+.home-btn4 {
+    border: 1px solid #ffa600;
+    background: #ffa600;
+    box-shadow: 0 0 0 0 rgb(173,226,226,0.4);
+        transition: box-shadow 0.2s ease-in;
+}
+
+.home-btn4:hover {
+    box-shadow: 0 0 10px 7px rgb(173, 226, 226, 0.4);
+} */
+
+@media screen and (min-width: 780px) and (max-width: 1200px) {
+    .home-btn {
+        padding: 0.8rem 1rem;
+    }
+}
+@media screen and (max-width: 780px) {
+    .home-btn {
+        padding: 0.5rem 0.8rem;
+    }
+    .header-home {
+        align-items:center;
+        padding-left: 0;
+        text-align: center;
+    }
+    .home-btns {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+    }
+}
+</style>
